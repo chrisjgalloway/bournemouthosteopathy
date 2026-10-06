@@ -6,16 +6,13 @@ import { site } from "@/lib/site";
 
 export const metadata = pageMetadata(pages.contact);
 
-const { lat, lng, zoom } = site.map;
-const mapSrc = `https://maps.google.com/maps?q=${lat},${lng}&z=${zoom}&output=embed`;
-
 export default function ContactPage() {
   return (
     <>
       <JsonLd page={pages.contact} />
       <iframe
         className="map"
-        src={mapSrc}
+        src={site.mapEmbedUrl}
         title="Map showing the Bournemouth Osteopathic & Cranial Centre, 105 Lowther Road"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
@@ -51,7 +48,11 @@ export default function ContactPage() {
                     ))}
                   </address>
                   <a href={site.directionsUrl} target="_blank" rel="noopener noreferrer">
-                    Get directions in Google Maps
+                    Get directions
+                  </a>{" "}
+                  &middot;{" "}
+                  <a href={site.googleListingUrl} target="_blank" rel="noopener noreferrer">
+                    See us on Google
                   </a>
                 </div>
               </div>
