@@ -16,7 +16,8 @@ export default function ContactForm() {
       const body = new URLSearchParams(
         Array.from(new FormData(form), ([k, v]) => [k, String(v)]),
       ).toString();
-      const res = await fetch("/", {
+      // Post to the static form file so Netlify always picks it up (see public/__forms.html).
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body,

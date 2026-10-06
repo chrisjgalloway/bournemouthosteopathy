@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+  Plain HTML copy of the site's forms so Netlify can find them at deploy time.
+  Netlify's Next.js support doesn't always detect forms rendered by React, so
+  the real form (components/ContactForm.tsx) posts to this file instead.
+  Keep the field names here in sync with that component.
+-->
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>
