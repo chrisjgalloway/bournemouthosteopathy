@@ -7,7 +7,7 @@ The whole site is static (`output: "export"`) and is hosted on Netlify.
 
 ```bash
 yarn install
-yarn dev     # http://localhost:3000
+yarn start   # dev server, http://localhost:3000
 yarn build   # static site in ./out
 yarn lint
 ```

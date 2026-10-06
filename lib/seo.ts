@@ -153,6 +153,7 @@ export function pageJsonLd(page: PageSeo) {
           addressCountry: "GB",
         },
         geo: { "@type": "GeoCoordinates", latitude: site.map.lat, longitude: site.map.lng },
+        hasMap: site.googleListingUrl,
       },
     ],
   };
