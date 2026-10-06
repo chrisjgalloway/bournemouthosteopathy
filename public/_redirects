@@ -1,0 +1,19 @@
+# Redirects from the old WordPress site. Netlify reads this file from the
+# published folder, so it works for both Git and drag-and-drop deploys.
+
+# Old privacy notice link
+/wp-content/uploads/2018/07/GDPR-Privacy-Notice-BOCC3.pdf  /docs/GDPR-Privacy-Notice-BOCC.pdf  301
+
+# Old pages
+/osteopathy/*  /osteopathic/  301
+/news/*        /              301
+/testing/*     /              301
+
+# Old Yoast sitemaps
+/sitemap_index.xml  /sitemap.xml  301
+/page-sitemap.xml   /sitemap.xml  301
+
+# Old WordPress shortlinks (?p=ID)
+/  p=53  /osteopathic/  301!
+/  p=54  /cranial/      301!
+/  p=55  /contact/      301!
