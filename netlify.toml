@@ -1,0 +1,8 @@
+# Used for Git-based deploys. Redirects live in public/_redirects so they
+# also work when the built "out" folder is uploaded by hand.
+[build]
+  command = "yarn build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
