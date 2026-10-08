@@ -10,7 +10,7 @@ export const metadata = pageMetadata(pages.home);
 
 // Every point here comes from the original site copy.
 const highlights = [
-  { icon: ClockIcon, title: "20+ years", text: "Established in Bournemouth" },
+  { icon: ClockIcon, title: "25+ years", text: "Established in Bournemouth" },
   { icon: ShieldIcon, title: "GOsC registered", text: "State registered osteopath" },
   { icon: HeartIcon, title: "All ages", text: "From babies to the elderly" },
   { icon: CarIcon, title: "Onsite parking", text: "Close to the town centre" },
