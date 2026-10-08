@@ -7,7 +7,7 @@ import { PhoneIcon } from "@/components/icons";
 import { site } from "@/lib/site";
 
 const slides = [
-  { src: "/images/slide-1.jpg", lines: ["Established for over", "20 years in Bournemouth"] },
+  { src: "/images/slide-1.jpg", lines: ["Established for over", "25 years in Bournemouth"] },
   { src: "/images/slide-2.jpg", lines: ["Gentle and effective", "treatment for people", "of all ages"] },
   {
     src: "/images/slide-3.jpg",
@@ -19,29 +19,25 @@ const INTERVAL_MS = 6000;
 
 export default function HeroSlider() {
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
 
   const go = useCallback(
     (step: number) => setIndex((i) => (i + step + slides.length) % slides.length),
     [],
   );
 
+  // Keeps rotating like the old site, even with the mouse over it. Picking a
+  // slide restarts the timer. With reduced motion turned on, slides still change
+  // but the CSS drops the slide-in animation.
   useEffect(() => {
-    if (paused) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const id = window.setTimeout(() => go(1), INTERVAL_MS);
     return () => window.clearTimeout(id);
-  }, [index, paused, go]);
+  }, [index, go]);
 
   return (
     <section
       className="hero"
       aria-roledescription="carousel"
       aria-label="Welcome"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={() => setPaused(false)}
     >
       {slides.map((slide, i) => (
         <div

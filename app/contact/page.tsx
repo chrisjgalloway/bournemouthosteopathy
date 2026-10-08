@@ -71,22 +71,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="info-card info-card--alert">
-                <span className="icon-badge">
-                  <AlertIcon size={20} />
-                </span>
-                <div>
-                  <h2 className="h3">Cancellations:</h2>
-                  <p>
-                    <strong>PLEASE DO NOT CANCEL BY EMAIL</strong>
-                    <br />
-                    Please call {site.phone} to cancel appointments.
-                    <br />
-                    24 hours notice is required or you will be charged.
-                  </p>
-                </div>
-              </div>
-
               <div className="info-card">
                 <span className="icon-badge">
                   <ShieldIcon size={20} />
@@ -99,6 +83,20 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
+              <div className="info-card info-card--alert">
+                <span className="icon-badge">
+                  <AlertIcon size={20} />
+                </span>
+                <div>
+                  <h2 className="h3">Cancellations:</h2>
+                  <p>
+                    Please call {site.phone} to cancel appointments.
+                    <br />
+                    24 hours notice is required or you will be charged.
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
           <div className="form-panel">
