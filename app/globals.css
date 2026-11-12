@@ -853,6 +853,7 @@ address {
   display: none;
 }
 
+/* Badge */ 
 #nl-badge-frame,
 #nl-hud-frame,
 iframe[title="Powered by Netlify"] {
