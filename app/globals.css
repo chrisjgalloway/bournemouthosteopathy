@@ -854,7 +854,8 @@ address {
 }
 
 #nl-badge-frame,
-#nl-hud-frame {
+#nl-hud-frame,
+iframe[title="Powered by Netlify"] {
   display: none !important;
 }
 
