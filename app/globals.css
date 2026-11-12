@@ -853,6 +853,12 @@ address {
   display: none;
 }
 
+#nl-badge-frame,
+#nl-hud-frame,
+iframe[title="Powered by Netlify"] {
+  display: none !important;
+}
+
 /* ---------- Tablet ---------- */
 
 @media (max-width: 980px) {
